@@ -1,0 +1,141 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.credit {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  background: rgb(255, 255, 255);
+  z-index: 10;
+}
+#app {
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.home__preloader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.home {
+}
+.home__wrapper {
+  display: flex;
+  min-height: 100%;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column-reverse;
+  }
+}
+.posts {
+  flex-basis: 65%;
+  min-height: 100%;
+}
+.post {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.post--placeholder {
+  text-align: center;
+}
+.post--comment {
+  margin: 0;
+}
+.post__content {
+  display: flex;
+  padding: 20px;
+  border: 1px solid rgb(129, 214, 235);
+  background: rgb(167, 237, 255);
+}
+.post__img {
+  max-width: 200px;
+  height: auto;
+  @media screen and (max-width: 720px) {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+.post__text {
+  padding: 10px;
+}
+.post__author {
+  display: block;
+  color: gray;
+}
+.post__author--comment {
+  font-weight: 500;
+  color: black;
+}
+.post__answer-mark {
+  font-weight: normal;
+  color: gray;
+}
+.post__title {
+  font-weight: 500;
+  margin: 10px 0;
+}
+.post__body {
+  margin: 10px 0;
+}
+.post__comments-btn {
+  position: relative;
+  top: -30px;
+  right: 5px;
+  align-self: flex-end;
+  border: none;
+  background: rgb(167, 237, 255);
+  color: rgb(0, 153, 255);
+  outline: none;
+  cursor: pointer;
+  &:focus {
+    box-shadow: inset 0 0 2px 2px rgb(3, 31, 122);
+  }
+}
+.post__comments-btn--close {
+  top: 0;
+  right: 2.5%;
+}
+.comments-section {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.filters {
+  background: lightgray;
+  flex-basis: 35%;
+  padding: 10px 30px;
+  min-height: 100vh;
+  @media screen and (max-width: 1024px) {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    min-height: unset;
+  }
+}
+.filters__fields {
+  position: sticky;
+  top: 20px;
+}
+.filters__filter-name {
+  display: block;
+}
+.filters__input {
+  width: 100%;
+  padding: 10px 5px 5px 5px;
+  border-radius: 5px 5px 0 0;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  &:focus {
+    box-shadow: inset 0 0 2px 2px rgb(52, 189, 243);
+  }
+}
